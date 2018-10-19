@@ -104,7 +104,7 @@ class ContactTableViewController: UITableViewController, ContactTableViewCellInt
         do {
             let url = URL(string: urlString)
             let data = try Data(contentsOf: url!)
-            return UIImage(data: data)!
+            return UIImage(data: data) ?? UIImage(named: "defaultImage")!
         }
         catch{
             print(error)
